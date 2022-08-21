@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97E1095D-1369-4C6E-A774-38F6FDB14A7A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Drishti_Computers.My.MyApplication</StartupObject>
+    <RootNamespace>Drishti_Computers</RootNamespace>
+    <AssemblyName>Drishti Computers</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>Deepak Prajapati</PublisherName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Drishti Computers.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Drishti Computers.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AF0859281DA2273DA6ABA4D15ABCF96CBE7DFBEE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Drishti Computers-main_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper">
+      <HintPath>..\..\..\Microsoft Visual Studio DLL\Dapper\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>Packages\Guna\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>Packages\Guna\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsFormsApplication1">
+      <HintPath>Packages\WindowsFormsApplication1.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.Dapper.Plus, Version=4.0.32.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.4.0.32\lib\net45\Z.Dapper.Plus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Guna" />
+    <Import Include="Guna.UI" />
+    <Import Include="Guna.UI.Animation" />
+    <Import Include="Guna.UI.Animation.Material" />
+    <Import Include="Guna.UI.Lib.ScrollBar" />
+    <Import Include="Guna.UI.WinForms" />
+    <Import Include="Guna.UI2" />
+    <Import Include="Guna.UI2.AnimatorNS" />
+    <Import Include="Guna.UI2.Licensing" />
+    <Import Include="Guna.UI2.Material" />
+    <Import Include="Guna.UI2.Material.Animation" />
+    <Import Include="Guna.UI2.Native" />
+    <Import Include="Guna.UI2.WinForms" />
+    <Import Include="Guna.UI2.WinForms.Enums" />
+    <Import Include="Guna.UI2.WinForms.Helpers" />
+    <Import Include="Guna.UI2.WinForms.Interfaces" />
+    <Import Include="Guna.UI2.WinForms.Internal" />
+    <Import Include="Guna.UI2.WinForms.Suite" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About-Developer.Designer.vb">
+      <DependentUpon>About-Developer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About-Developer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin-main.Designer.vb">
+      <DependentUpon>Admin-main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DrishtiDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrishtiDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DrishtiDBDataSet.vb">
+      <DependentUpon>DrishtiDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FeesdataExport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeesdataExport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Feesrecipt.vb">
+      <DependentUpon>Feesrecipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="frmAdmissioncancel1.Designer.vb">
+      <DependentUpon>frmAdmissioncancel1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmissioncancel1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFeesRecord1.Designer.vb">
+      <DependentUpon>FrmFeesRecord1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFeesRecord1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About-Box.Designer.vb">
+      <DependentUpon>About-Box.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About-Box.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddRegistrationNo.Designer.vb">
+      <DependentUpon>FrmAddRegistrationNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddRegistrationNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmissioncancel.Designer.vb">
+      <DependentUpon>FrmAdmissioncancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdmissioncancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssignement.Designer.vb">
+      <DependentUpon>FrmAssignement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssignement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCenterInfo.Designer.vb">
+      <DependentUpon>FrmCenterInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCenterInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.vb">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourse.Designer.vb">
+      <DependentUpon>frmCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCourseMaterial.Designer.vb">
+      <DependentUpon>FrmCourseMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCourseMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCourseMaterialRecord.Designer.vb">
+      <DependentUpon>FrmCourseMaterialRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCourseMaterialRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepositfees.Designer.vb">
+      <DependentUpon>frmDepositfees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepositfees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiscount.Designer.vb">
+      <DependentUpon>FrmDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExamFromSB.Designer.vb">
+      <DependentUpon>FrmExamFromSB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExamFromSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeesrecord.Designer.vb">
+      <DependentUpon>frmFeesrecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeesrecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFullReport.Designer.vb">
+      <DependentUpon>FrmFullReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFullReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.vb">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOtherFees.Designer.vb">
+      <DependentUpon>FrmOtherFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOtherFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogs.Designer.vb">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManageCourseCategory.Designer.vb">
+      <DependentUpon>FrmManageCourseCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageCourseCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultGiven.Designer.vb">
+      <DependentUpon>FrmResultGiven.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultGiven.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResultGivenRecord.Designer.vb">
+      <DependentUpon>frmResultGivenRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResultGivenRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResultReceive.Designer.vb">
+      <DependentUpon>frmResultReceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResultReceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultReceiveRecord.Designer.vb">
+      <DependentUpon>FrmResultReceiveRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultReceiveRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudent.Designer.vb">
+      <DependentUpon>FrmStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherCenters.Designer.vb">
+      <DependentUpon>frmOtherCenters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherCenters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSession.Designer.vb">
+      <DependentUpon>frmSession.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSession.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentM.Designer.vb">
+      <DependentUpon>FrmStudentM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudentM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRecord.Designer.vb">
+      <DependentUpon>frmStudentRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageUser.Designer.vb">
+      <DependentUpon>frmManageUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentRecord1.Designer.vb">
+      <DependentUpon>FrmStudentRecord1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudentRecord1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStuDetailasPopup.Designer.vb">
+      <DependentUpon>FrmStuDetailasPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStuDetailasPopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FullReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModAdo.vb" />
+    <Compile Include="ModClass.vb" />
+    <Compile Include="ModFunc.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucAdmissionCancel1.Designer.vb">
+      <DependentUpon>ucAdmissionCancel1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmissionCancel1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User-Main.Designer.vb">
+      <DependentUpon>User-Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User-Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About-Developer.resx">
+      <DependentUpon>About-Developer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin-main.resx">
+      <DependentUpon>Admin-main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeesdataExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FeesdataExport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feesrecipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Feesrecipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmissioncancel1.resx">
+      <DependentUpon>frmAdmissioncancel1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFeesRecord1.resx">
+      <DependentUpon>FrmFeesRecord1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About-Box.resx">
+      <DependentUpon>About-Box.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddRegistrationNo.resx">
+      <DependentUpon>FrmAddRegistrationNo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmissioncancel.resx">
+      <DependentUpon>FrmAdmissioncancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssignement.resx">
+      <DependentUpon>FrmAssignement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCenterInfo.resx">
+      <DependentUpon>FrmCenterInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourse.resx">
+      <DependentUpon>frmCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCourseMaterial.resx">
+      <DependentUpon>FrmCourseMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCourseMaterialRecord.resx">
+      <DependentUpon>FrmCourseMaterialRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepositfees.resx">
+      <DependentUpon>frmDepositfees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiscount.resx">
+      <DependentUpon>FrmDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExamFromSB.resx">
+      <DependentUpon>FrmExamFromSB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeesrecord.resx">
+      <DependentUpon>frmFeesrecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFullReport.resx">
+      <DependentUpon>FrmFullReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOtherFees.resx">
+      <DependentUpon>FrmOtherFees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogs.resx">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManageCourseCategory.resx">
+      <DependentUpon>FrmManageCourseCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultGiven.resx">
+      <DependentUpon>FrmResultGiven.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResultGivenRecord.resx">
+      <DependentUpon>frmResultGivenRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResultReceive.resx">
+      <DependentUpon>frmResultReceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultReceiveRecord.resx">
+      <DependentUpon>FrmResultReceiveRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudent.resx">
+      <DependentUpon>FrmStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherCenters.resx">
+      <DependentUpon>frmOtherCenters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSession.resx">
+      <DependentUpon>frmSession.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentM.resx">
+      <DependentUpon>FrmStudentM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRecord.resx">
+      <DependentUpon>frmStudentRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageUser.resx">
+      <DependentUpon>frmManageUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentRecord1.resx">
+      <DependentUpon>FrmStudentRecord1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStuDetailasPopup.resx">
+      <DependentUpon>FrmStuDetailasPopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FullReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmissionCancel1.resx">
+      <DependentUpon>ucAdmissionCancel1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User-Main.resx">
+      <DependentUpon>User-Main.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DrishtiDBDataSet.xsc">
+      <DependentUpon>DrishtiDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DrishtiDBDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DrishtiDBDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DrishtiDBDataSet.xss">
+      <DependentUpon>DrishtiDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Icons\location_2_48px.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
